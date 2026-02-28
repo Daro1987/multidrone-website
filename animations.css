@@ -1,0 +1,78 @@
+/* REVEAL APPLE STYLE */
+.reveal {
+  opacity: 0;
+  transform: translateY(60px) scale(.98);
+  filter: blur(8px);
+  transition: all .9s cubic-bezier(.22,.61,.36,1);
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  filter: blur(0);
+}
+
+/* CARDS PREMIUM */
+.premium-card {
+  transition: transform .5s ease, box-shadow .5s ease;
+}
+
+.premium-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0,0,0,.35);
+}
+
+/* BOTONES MICROINTERACTION */
+.btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg,transparent,rgba(255,255,255,.25),transparent);
+  opacity: 0;
+  transition: .6s;
+}
+
+.btn:hover::after {
+  opacity: 1;
+}
+
+/* NAV UNDERLINE PREMIUM */
+nav a {
+  position: relative;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: #38bdf8;
+  transition: .4s;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* PARALLAX BASE */
+.parallax {
+  transform: translateZ(0);
+  will-change: transform;
+}
+.reveal {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 0.9s ease;
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
